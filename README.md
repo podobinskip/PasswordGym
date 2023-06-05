@@ -1,3 +1,9 @@
+
+# Password Gym
+
+Password checker and strengthener.
+
+
 ### Versions
 #### Python
 * Download the PasswordGym.py file inside the Python folder from this repository.
@@ -16,4 +22,5 @@
 
 ## Additional Info
 This project is open source! Feel free to use whatever you need.
+
 
