@@ -1,10 +1,8 @@
-# Using codebeautify.org to make the code better formatted and readable!
-# Check it out here: https://codebeautify.org/python-formatter-beautifier#
-
 import random
 import string
 
-passlen = 12  # Change this to any number greater than 8. Recommended to keep this at 12.
+# Change this to any number greater than 8. Recommended to keep this at 12.
+passlen = 12
 
 
 # This function will check the user's password strength.
@@ -22,7 +20,8 @@ def check_password_strength(password):
     if not any(char.isupper() for char in password) or not any(
         char.islower() for char in password
     ):
-        return "UPLOW"  # Password does not contain an uppercase and lowercase letter.
+        # Password does not contain an uppercase and lowercase letter.
+        return "UPLOW"
     # Check #2 passed, continue...
 
     # Check #3: Check For At Least 1 Digit
@@ -32,7 +31,8 @@ def check_password_strength(password):
 
     # Check #4: Check For At Least 1 Symbol
     if not any(char in "!@#$%^&*+" for char in password):
-        return "NOSYM"  # Password does not contain a symbol from the list above.
+        # Password does not contain a symbol from the list above.
+        return "NOSYM"
     # Check #4 passed, continue...
 
     # Check #5: Check For Consecutive Characters
@@ -44,9 +44,11 @@ def check_password_strength(password):
     # Check #6: Check For Patterns
     for i in range(len(password) - 2):
         if (
-            (ord(password[i]) == ord(password[i + 1]) - 1 == ord(password[i + 2]) - 2)
+            (ord(password[i]) == ord(password[i + 1]) -
+             1 == ord(password[i + 2]) - 2)
             or (
-                ord(password[i]) == ord(password[i + 1]) + 1 == ord(password[i + 2]) + 2
+                ord(password[i]) == ord(password[i + 1]) +
+                1 == ord(password[i + 2]) + 2
             )
             or (password[i] == password[i + 1] == password[i + 2])
         ):
@@ -82,14 +84,14 @@ def generate_password(keyword, password):
             updated_password = (
                 updated_password[:index]
                 + updated_password[index].lower()
-                + updated_password[index + 1 :]
+                + updated_password[index + 1:]
             )
         if not uppercase_indices:
             index = random.choice(lowercase_indices)
             updated_password = (
                 updated_password[:index]
                 + updated_password[index].upper()
-                + updated_password[index + 1 :]
+                + updated_password[index + 1:]
             )
 
     if keyword == "NODIG":
@@ -112,7 +114,7 @@ def generate_password(keyword, password):
                 updated_password = (
                     updated_password[:i]
                     + replacements[updated_password[i]]
-                    + updated_password[i + 1 :]
+                    + updated_password[i + 1:]
                 )
                 replaced = True
                 break
@@ -143,7 +145,7 @@ def generate_password(keyword, password):
                 updated_password = (
                     updated_password[:i]
                     + replacements[updated_password[i]]
-                    + updated_password[i + 1 :]
+                    + updated_password[i + 1:]
                 )
                 replaced = True
                 break
@@ -176,7 +178,7 @@ def generate_password(keyword, password):
                     updated_password = (
                         updated_password[: i + 1]
                         + random.choice(replacement)
-                        + updated_password[i + 2 :]
+                        + updated_password[i + 2:]
                     )
                 else:
                     updated_password = (
@@ -184,7 +186,7 @@ def generate_password(keyword, password):
                         + random.choice(
                             string.ascii_letters + string.digits + "!@#$%^&*+"
                         )
-                        + updated_password[i + 1 :]
+                        + updated_password[i + 1:]
                     )
                 break
 
@@ -212,7 +214,7 @@ def generate_password(keyword, password):
                     updated_password = (
                         updated_password[: i + 1]
                         + random.choice(replacement)
-                        + updated_password[i + 2 :]
+                        + updated_password[i + 2:]
                     )
                 else:
                     updated_password = (
@@ -220,7 +222,7 @@ def generate_password(keyword, password):
                         + random.choice(
                             string.ascii_letters + string.digits + "!@#$%^&*+"
                         )
-                        + updated_password[i + 1 :]
+                        + updated_password[i + 1:]
                     )
                 break
     return updated_password
@@ -252,11 +254,10 @@ while True:
 
         print("\n***Your new password:", new_password)
 
-    user_feedback = input("\nWould you like to check another password? (y/n): ")
+    user_feedback = input(
+        "\nWould you like to check another password? (y/n): ")
 
     if user_feedback.lower() == "n":
         print("\nThanks for using Password Gym!")
         print("Please check out my GitHub for more personal projects! https://github.com/podobinskip")
         break
-    
-
