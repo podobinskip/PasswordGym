@@ -5,7 +5,7 @@ Password checker and strengthener.
 
 
 ### Versions
-#### Python
+#### Python Script
 * Download the PasswordGym.py file inside the Python folder from this repository.
 * Open PasswordGym.py in your favorite IDE.
 * Run the file with a Python terminal enabled.
