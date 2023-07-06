@@ -7,7 +7,7 @@ function createPasswordBoxElement() {
   container.classList.add("password-container");
 
   var passwordLabel = document.createElement("label");
-  passwordLabel.textContent = "Check your password with PasswordGym!";
+  passwordLabel.textContent = "Check your password with Password Gym!";
   passwordLabel.classList.add("password-label");
   container.appendChild(passwordLabel);
 

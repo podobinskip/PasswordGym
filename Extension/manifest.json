@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "PasswordGym",
+  "name": "Password Gym",
   "version": "1.0",
   "description": "Check and strengthen your password!",
   "permissions": [
