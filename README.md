@@ -13,8 +13,9 @@ Password checker and strengthener.
 
 #### Chromium Extension
 * Many of the same features as above, but with the convenience of being an extension.
-* Download the Extension folder.
-* In your Chromium broswer, navigate Settings->Extensions->Enable developer mode->Load unpacked extension and select the Extension folder containing PasswordGym.
+* Download the Extension folder, and rename it to something more distinguishable if you wish.
+* In your Chromium broswer, navigate to Settings->Extensions and ensure that Developer Mode is enabled
+* While still on the Extensions window, click "Load unpacked extension" and select the folder you have downloaded containing the Password Gym extension.
 * Password Gym will automatically appear when you click on an account creation password field.
 
 #### Desktop Version (Windows OS) (In planning...)
