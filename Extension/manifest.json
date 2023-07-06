@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "PasswordGym",
+  "version": "1.0",
+  "description": "Check and strengthen your password!",
+  "permissions": [
+    "activeTab",
+    "runtime"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "PasswordGymLogo.png"
+  }
+}
